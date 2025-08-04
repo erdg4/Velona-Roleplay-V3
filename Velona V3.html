@@ -1,0 +1,402 @@
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Velona Roleplay V3</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: radial-gradient(circle at top, #2a003f, #0d0017);
+      color: white;
+      text-align: center;
+    }
+
+    header {
+      padding: 30px;
+      background: rgba(0, 0, 0, 0.4);
+      box-shadow: 0 0 15px #6a00ff;
+    }
+
+    header img {
+      max-height: 100px;
+      display: block;
+      margin: 0 auto 10px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      text-shadow: 0 0 10px #a64dff;
+    }
+
+    .btn-container {
+      margin: 40px auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .btn {
+      background: #6a00ff;
+      border: none;
+      padding: 20px 40px;
+      color: white;
+      font-size: 1.2em;
+      font-weight: bold;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 0 15px #6a00ff;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #8c1aff;
+      box-shadow: 0 0 25px #b366ff;
+      transform: scale(1.05);
+    }
+
+    .discord {
+      display: inline-block;
+      margin-top: 30px;
+      background: #5865F2;
+      padding: 15px 30px;
+      border-radius: 8px;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      box-shadow: 0 0 15px #5865F2;
+      transition: 0.3s;
+    }
+
+    .discord:hover {
+      background: #4752C4;
+      box-shadow: 0 0 25px #7d8bff;
+    }
+
+    .owners {
+      margin-top: 60px;
+      padding: 20px;
+    }
+
+    .owner-card {
+      background: rgba(255, 255, 255, 0.05);
+      display: inline-block;
+      margin: 10px;
+      padding: 15px;
+      border-radius: 12px;
+      width: 220px;
+      box-shadow: 0 0 15px #6a00ff;
+    }
+
+    .owner-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #6a00ff;
+    }
+
+    .owner-name {
+      margin-top: 10px;
+      font-weight: bold;
+      font-size: 1.2em;
+    }
+
+    /* RP-regler */
+    .rules {
+      max-width: 900px;
+      margin: 60px auto;
+      background: rgba(0, 0, 0, 0.5);
+      padding: 30px;
+      border-radius: 12px;
+      text-align: left;
+      box-shadow: 0 0 20px #6a00ff;
+    }
+
+    .rules h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 0 0 10px #a64dff;
+    }
+
+    .rules ul {
+      line-height: 1.7;
+      padding-left: 20px;
+    }
+
+    .rules li {
+      margin-bottom: 12px;
+    }
+
+    /* Ansökningsformulär */
+    #applicationSection {
+      background: rgba(0, 0, 0, 0.6);
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px #6a00ff;
+      text-align: left;
+      color: white;
+      display: none;
+    }
+
+    #applicationSection h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      text-shadow: 0 0 8px #a64dff;
+    }
+
+    form label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: bold;
+    }
+
+    form input[type="text"],
+    form input[type="number"],
+    form select,
+    form textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border-radius: 6px;
+      border: none;
+      font-size: 1em;
+      box-sizing: border-box;
+    }
+
+    form textarea {
+      resize: vertical;
+    }
+
+    form button {
+      background: #6a00ff;
+      border: none;
+      color: white;
+      font-size: 1.2em;
+      padding: 12px 0;
+      width: 100%;
+      border-radius: 10px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 15px #6a00ff;
+      transition: all 0.3s;
+    }
+
+    form button:hover {
+      background: #8c1aff;
+      box-shadow: 0 0 25px #b366ff;
+      transform: scale(1.05);
+    }
+
+    #response {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8em;
+      }
+      .btn {
+        font-size: 1em;
+        padding: 15px 25px;
+      }
+      .rules {
+        padding: 20px;
+      }
+      #applicationSection {
+        margin: 20px 15px;
+        padding: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <img src="img_5791.webp" alt="Velona Logo" />
+    <h1>Velona Roleplay V3</h1>
+  </header>
+
+  <div class="btn-container">
+    <button class="btn" onclick="showForm('whitelist')">Whitelist Ansökan</button>
+    <button class="btn" onclick="showForm('kriminell')">Kriminell Ansökan</button>
+    <button class="btn" onclick="showForm('staff')">Staff Ansökan</button>
+  </div>
+
+  <a class="discord" href="https://discord.gg/35eScprCx2" target="_blank">🔗 Anslut till våran discord</a>
+
+  <section id="applicationSection">
+    <h2>Ansökan - <span id="applicationTypeText">Typ</span></h2>
+    <form id="applicationForm"></form>
+    <div id="response"></div>
+  </section>
+
+  <div class="owners">
+    <h2>Ägare & Staff Team</h2>
+    <div class="owner-card">
+      <img src="img_5791.webp" alt="Ägare 1" />
+      <div class="owner-name">Ägare</div>
+      <div>arngaming607</div>
+    </div>
+
+    <div class="owner-card">
+      <img src="img_5791.webp" alt="Ägare 2" />
+      <div class="owner-name">Admin</div>
+      <div>Bella</div>
+    </div>
+  </div>
+
+  <div class="rules">
+    <h2>📜 Velona RP Regler</h2>
+    <ul>
+      <li><strong>1. Alltid spela din karaktär realistiskt:</strong> Du är inte odödlig, agera som om du lever ett riktigt liv. Våga vara rädd, ta konsekvenser och spela konsekvent.</li>
+      <li><strong>2. RDM är förbjudet:</strong> Du får inte döda eller attackera någon utan ett giltigt RP-syfte.</li>
+      <li><strong>3. Meta-gaming är förbjudet:</strong> Använd inte information utanför spelet.</li>
+      <li><strong>4. Powergaming är förbjudet:</strong> Tvinga inte fram handlingar på andra spelare utan deras samtycke.</li>
+      <li><strong>5. Respektera admins:</strong> Följ instruktioner och klaga på ett respektfullt sätt.</li>
+      <li><strong>6. Ingen diskriminering eller hat:</strong> Respektera alla spelare.</li>
+      <li><strong>7. Ha kul och bidra till en positiv spelmiljö!</strong></li>
+    </ul>
+  </div>
+
+  <script>
+    // LÄGG IN DINA WEBHOOK-URL:ER HÄR
+    const webhookURLs = {
+      whitelist: "https://discord.com/api/webhooks/WHITELIST_WEBHOOK_URL",
+      kriminell: "https://discord.com/api/webhooks/KRIMINELL_WEBHOOK_URL",
+      staff: "https://discord.com/api/webhooks/STAFF_WEBHOOK_URL"
+    };
+
+    // Ansökningsfält för varje typ
+    const formFields = {
+      whitelist: [
+        {label: "Steam ID", name: "steamID", type: "text", placeholder: "steam:1100001052341a7"},
+        {label: "Namn", name: "name", type: "text", placeholder: "Ditt namn i spelet"},
+        {label: "Ålder", name: "age", type: "number", min: 15, max: 100},
+        {label: "Varför vill du gå med i Velona RP?", name: "motivation", type: "textarea", placeholder: "Skriv här..."},
+        {label: "Berätta lite om dig själv", name: "about", type: "textarea", placeholder: "Berätta om dig själv..."},
+        {label: "Vad kan du bidra med i RP?", name: "contribution", type: "textarea", placeholder: "Vad kan du bidra med?"},
+      ],
+      kriminell: [
+        {label: "Steam ID", name: "steamID", type: "text", placeholder: "steam:1100001052341a7"},
+        {label: "Namn", name: "name", type: "text", placeholder: "Ditt namn i spelet"},
+        {label: "Ålder", name: "age", type: "number", min: 15, max: 100},
+        {label: "Vilken typ av kriminell vill du vara?", name: "crimeType", type: "text", placeholder: "T.ex. bankrånare, knarklangare"},
+        {label: "Varför vill du spela som kriminell?", name: "motivation", type: "textarea", placeholder: "Skriv här..."},
+        {label: "Har du erfarenhet av Krim-RP sedan tidigare?", name: "experience", type: "textarea", placeholder: "Berätta om din erfarenhet..."},
+      ],
+      staff: [
+        {label: "Steam ID", name: "steamID", type: "text", placeholder: "steam:1100001052341a7"},
+        {label: "Namn", name: "name", type: "text", placeholder: "Ditt namn"},
+        {label: "Ålder", name: "age", type: "number", min: 18, max: 100},
+        {label: "Vilken roll söker du?", name: "role", type: "select", options: ["Admin", "Moderator", "Support"]},
+        {label: "Varför vill du bli staff?", name: "motivation", type: "textarea", placeholder: "Skriv din motivation här..."},
+        {label: "Har du erfarenhet av staff arbete?", name: "experience", type: "textarea", placeholder: "Beskriv din erfarenhet..."},
+      ]
+    };
+
+    let currentForm = "";
+
+    function showForm(type) {
+      currentForm = type;
+      const formSection = document.getElementById("applicationSection");
+      const form = document.getElementById("applicationForm");
+      const typeText = document.getElementById("applicationTypeText");
+      const responseDiv = document.getElementById("response");
+      responseDiv.innerHTML = "";
+      typeText.textContent = type.charAt(0).toUpperCase() + type.slice(1);
+
+      // Skapa formulär HTML
+      let html = "";
+      const fields = formFields[type];
+      for (const field of fields) {
+        if(field.type === "textarea") {
+          html += `<label for="${field.name}">${field.label}</label>`;
+          html += `<textarea id="${field.name}" name="${field.name}" placeholder="${field.placeholder}" required></textarea>`;
+        } else if (field.type === "select") {
+          html += `<label for="${field.name}">${field.label}</label>`;
+          html += `<select id="${field.name}" name="${field.name}" required>`;
+          html += `<option value="" disabled selected>Välj</option>`;
+          for (const opt of field.options) {
+            html += `<option value="${opt}">${opt}</option>`;
+          }
+          html += `</select>`;
+        } else {
+          html += `<label for="${field.name}">${field.label}</label>`;
+          html += `<input type="${field.type}" id="${field.name}" name="${field.name}" placeholder="${field.placeholder || ""}"`;
+          if(field.min) html += ` min="${field.min}"`;
+          if(field.max) html += ` max="${field.max}"`;
+          html += ` required />`;
+        }
+      }
+      html += `<button type="submit">Skicka Ansökan</button>`;
+
+      form.innerHTML = html;
+      formSection.style.display = "block";
+
+      // Lägg till submit-event
+      form.onsubmit = function(event) {
+        event.preventDefault();
+        sendApplication(type);
+      };
+    }
+
+    function sendApplication(type) {
+      const form = document.getElementById("applicationForm");
+      const responseDiv = document.getElementById("response");
+
+      // Hämta webhook-URL för rätt typ
+      const webhookURL = webhookURLs[type];
+      if (!webhookURL) {
+        responseDiv.textContent = "Webhook URL är inte konfigurerad.";
+        return;
+      }
+
+      // Samla in data från formuläret
+      const formData = new FormData(form);
+      let description = "";
+
+      for (const [key, value] of formData.entries()) {
+        const label = formFields[type].find(f => f.name === key)?.label || key;
+        description += `**${label}:** ${value}\n`;
+      }
+
+      const payload = {
+        content: null,
+        embeds: [{
+          title: `Ny ${type.charAt(0).toUpperCase() + type.slice(1)} ansökan`,
+          description: description,
+          color: 0x6a00ff,
+          timestamp: new Date().toISOString(),
+          footer: { text: "Velona Roleplay V3" }
+        }]
+      };
+
+      fetch(webhookURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      })
+      .then(response => {
+        if (response.ok) {
+          responseDiv.style.color = "lightgreen";
+          responseDiv.textContent = "Ansökan skickad! Vi hör av oss så snart som möjligt.";
+          form.reset();
+        } else {
+          throw new Error("Något gick fel vid skickning.");
+        }
+      })
+      .catch(error => {
+        responseDiv.style.color = "red";
+        responseDiv.textContent = "Fel vid skickning: " + error.message;
+      });
+    }
+  </script>
+
+</body>
+</html>
