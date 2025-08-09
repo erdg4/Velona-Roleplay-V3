@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="sv">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Velona Roleplay V3</title>
     <style>
         body {
@@ -17,6 +17,11 @@
             padding: 20px;
             background: linear-gradient(90deg, #8e2de2, #4a00e0);
             box-shadow: 0 0 20px #8e2de2;
+        }
+        header img {
+            max-height: 80px;
+            display: block;
+            margin: 0 auto 15px auto;
         }
         header h1 {
             margin: 0;
@@ -53,10 +58,10 @@
             margin-bottom: 30px;
             box-shadow: 0 0 15px #4a00e0;
         }
-        input, textarea, button {
+        input, textarea, select, button {
             width: 100%;
             padding: 10px;
-            margin: 5px 0;
+            margin: 5px 0 15px 0;
             border-radius: 5px;
             border: none;
             font-size: 1em;
@@ -75,6 +80,7 @@
             padding: 10px;
             background: #111;
             font-size: 0.9em;
+            text-align: center;
         }
         .discord-btn {
             display: inline-block;
@@ -91,6 +97,7 @@
 <body>
 
 <header>
+    <img src="img_5791.webp" alt="Velona Roleplay Logga" />
     <h1>Velona Roleplay V3</h1>
     <p>Professionell RP-server med passion för realistiskt rollspel</p>
     <a href="https://discord.gg/35eScprCx2" target="_blank" class="discord-btn">Gå med i vår Discord</a>
@@ -108,7 +115,17 @@
     <form action="https://formspree.io/f/mldlajdr" method="POST">
         <input type="text" name="Namn" placeholder="Ditt namn" required>
         <input type="email" name="Email" value="edonizegrova@gmail.com" hidden>
-        <textarea name="Varför vill du bli whitelista?" placeholder="Skriv ditt svar här..." required></textarea>
+
+        <textarea name="Varför vill du bli whitelista?" placeholder="Varför vill du bli whitelistad?" required></textarea>
+
+        <textarea name="Hur planerar du att bidra till serverns RP?" placeholder="Hur planerar du att bidra till serverns rollspel?" required></textarea>
+
+        <textarea name="Kan du beskriva vad Powergaming och Metagaming är?" placeholder="Beskriv vad Powergaming och Metagaming innebär." required></textarea>
+
+        <textarea name="Har du läst och förstått serverns regler?" placeholder="Har du läst och förstått serverns regler? Beskriv med egna ord." required></textarea>
+
+        <textarea name="Beskriv din rollperson och dess bakgrund" placeholder="Beskriv din rollperson och dess bakgrund." required></textarea>
+
         <button type="submit">Skicka Ansökan</button>
     </form>
 </section>
@@ -118,7 +135,17 @@
     <form action="https://formspree.io/f/mldlajdr" method="POST">
         <input type="text" name="Namn" placeholder="Ditt namn" required>
         <input type="email" name="Email" value="edonizegrova@gmail.com" hidden>
-        <textarea name="Beskriv din kriminella karaktär" placeholder="Skriv ditt svar här..." required></textarea>
+
+        <textarea name="Beskriv din kriminella karaktär" placeholder="Beskriv din kriminella karaktär" required></textarea>
+
+        <textarea name="Vilken typ av kriminell verksamhet planerar du?" placeholder="Vilken typ av kriminell verksamhet planerar du att bedriva?" required></textarea>
+
+        <textarea name="Hur tänker du undvika RDM/VDM i ditt spel?" placeholder="Hur tänker du undvika RDM/VDM?" required></textarea>
+
+        <textarea name="Hur agerar din karaktär i konflikter?" placeholder="Hur agerar din karaktär i konflikter?" required></textarea>
+
+        <textarea name="Vad vet du om serverns RP-regler?" placeholder="Vad vet du om serverns RP-regler?" required></textarea>
+
         <button type="submit">Skicka Ansökan</button>
     </form>
 </section>
@@ -128,7 +155,15 @@
     <form action="https://formspree.io/f/mldlajdr" method="POST">
         <input type="text" name="Namn" placeholder="Ditt namn" required>
         <input type="email" name="Email" value="edonizegrova@gmail.com" hidden>
-        <textarea name="Varför vill du bli staff?" placeholder="Skriv ditt svar här..." required></textarea>
+
+        <textarea name="Varför vill du bli staff?" placeholder="Varför vill du bli staff?" required></textarea>
+
+        <textarea name="Har du tidigare erfarenhet som staff? Om ja, beskriv." placeholder="Beskriv din tidigare erfarenhet som staff." required></textarea>
+
+        <textarea name="Hur hanterar du konflikter mellan spelare?" placeholder="Hur hanterar du konflikter mellan spelare?" required></textarea>
+
+        <textarea name="Hur mycket tid kan du lägga på staff-rollen per vecka?" placeholder="Hur mycket tid kan du lägga på staff-rollen per vecka?" required></textarea>
+
         <button type="submit">Skicka Ansökan</button>
     </form>
 </section>
