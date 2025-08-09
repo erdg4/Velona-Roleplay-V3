@@ -1,71 +1,154 @@
-<html>
+<!DOCTYPE html>
+<html lang="sv">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Velona RP – Ansökningar</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #121212;
-      color: #fff;
-      margin: 0;
-      padding: 20px;
-    }
-
-    header {
-      text-align: center;
-      margin-bottom: 40px;
-    }
-
-    h1 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    h2 {
-      font-size: 1.8rem;
-      margin-top: 60px;
-      text-align: center;
-    }
-
-    iframe {
-      display: block;
-      margin: 20px auto;
-      width: 95%;
-      max-width: 900px;
-      height: 1000px;
-      border: none;
-      border-radius: 10px;
-      background: #fff;
-    }
-
-    footer {
-      text-align: center;
-      margin-top: 50px;
-      font-size: 0.9rem;
-      color: #888;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velona Roleplay V3</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #0a0a0a;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        header {
+            padding: 20px;
+            background: linear-gradient(90deg, #8e2de2, #4a00e0);
+            box-shadow: 0 0 20px #8e2de2;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            text-shadow: 0 0 10px #fff;
+        }
+        nav {
+            margin-top: 15px;
+        }
+        nav a {
+            margin: 10px;
+            padding: 10px 20px;
+            color: white;
+            background: #8e2de2;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 0 10px #8e2de2;
+            transition: 0.3s;
+        }
+        nav a:hover {
+            background: #4a00e0;
+            box-shadow: 0 0 20px #4a00e0;
+        }
+        section {
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            text-align: left;
+        }
+        form {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: 0 0 15px #4a00e0;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            border: none;
+            font-size: 1em;
+        }
+        button {
+            background: #8e2de2;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        button:hover {
+            background: #4a00e0;
+        }
+        footer {
+            margin-top: 50px;
+            padding: 10px;
+            background: #111;
+            font-size: 0.9em;
+        }
+        .discord-btn {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: #5865F2;
+            color: white;
+            border-radius: 8px;
+            text-decoration: none;
+            box-shadow: 0 0 10px #5865F2;
+        }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Velona RP – Ansökningar</h1>
-    <p>Välj formulär nedan och fyll i din ansökan</p>
-  </header>
+<header>
+    <h1>Velona Roleplay V3</h1>
+    <p>Professionell RP-server med passion för realistiskt rollspel</p>
+    <a href="https://discord.gg/35eScprCx2" target="_blank" class="discord-btn">Gå med i vår Discord</a>
+</header>
 
-  <h2>Medlemsansökan</h2>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfEXEMPELFORM/viewform?embedded=true">Laddar…</iframe>
+<nav>
+    <a href="#whitelist">Whitelist Ansökan</a>
+    <a href="#kriminell">Kriminell Ansökan</a>
+    <a href="#staff">Staff Ansökan</a>
+    <a href="#regler">RP-Regler</a>
+</nav>
 
-  <h2>Staffansökan</h2>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdEXEMPELFORM/viewform?embedded=true">Laddar…</iframe>
+<section id="whitelist">
+    <h2>Whitelist Ansökan</h2>
+    <form action="https://formspree.io/f/mldlajdr" method="POST">
+        <input type="text" name="Namn" placeholder="Ditt namn" required>
+        <input type="email" name="Email" value="edonizegrova@gmail.com" hidden>
+        <textarea name="Varför vill du bli whitelista?" placeholder="Skriv ditt svar här..." required></textarea>
+        <button type="submit">Skicka Ansökan</button>
+    </form>
+</section>
 
-  <h2>Kriminell ansökan</h2>
-  <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeEXEMPELFORM/viewform?embedded=true">Laddar…</iframe>
+<section id="kriminell">
+    <h2>Kriminell Ansökan</h2>
+    <form action="https://formspree.io/f/mldlajdr" method="POST">
+        <input type="text" name="Namn" placeholder="Ditt namn" required>
+        <input type="email" name="Email" value="edonizegrova@gmail.com" hidden>
+        <textarea name="Beskriv din kriminella karaktär" placeholder="Skriv ditt svar här..." required></textarea>
+        <button type="submit">Skicka Ansökan</button>
+    </form>
+</section>
 
-  <footer>
-    © Velona Roleplay 2025 – All rights reserved
-  </footer>
+<section id="staff">
+    <h2>Staff Ansökan</h2>
+    <form action="https://formspree.io/f/mldlajdr" method="POST">
+        <input type="text" name="Namn" placeholder="Ditt namn" required>
+        <input type="email" name="Email" value="edonizegrova@gmail.com" hidden>
+        <textarea name="Varför vill du bli staff?" placeholder="Skriv ditt svar här..." required></textarea>
+        <button type="submit">Skicka Ansökan</button>
+    </form>
+</section>
+
+<section id="regler">
+    <h2>RP-Regler</h2>
+    <p>
+        1. Inget Powergaming – Gör inte saker som är omöjliga i verkligheten.<br>
+        2. Inget Metagaming – Använd inte information du fått utanför RP.<br>
+        3. Respektera andra spelare och deras rollspel.<br>
+        4. Inget RDM/VDM – Döda inte eller kör på folk utan giltig RP-anledning.<br>
+        5. Följ alltid serverledningens beslut.<br>
+        6. Allt RP ska vara realistiskt och genomtänkt.<br>
+        7. Använd sunt förnuft – Alltid.
+    </p>
+</section>
+
+<footer>
+    <p>© 2025 Velona Roleplay V3 – Alla rättigheter förbehållna.</p>
+</footer>
 
 </body>
 </html>
